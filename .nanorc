@@ -1,3 +1,24 @@
 set smarthome
 set softwrap
 bind ^R replace main
+bind ^L linenumbers main
+bind ^T whitespacedisplay main
+bind M-C copytext main
+bind M-V uncut main
+unbind ^G main
+unbind ^J main
+unbind ^_ main
+unbind M-E main
+unbind M-W main
+unbind F5 main
+unbind M-] main
+unbind ^B main
+unbind F12 main
+unbind F4 main
+unbind F16 main
+unbind M-6 main
+unbind Ins main
+unbind ^A main
+unbind ^E main
+unbind F1 main
+unbind ^P main

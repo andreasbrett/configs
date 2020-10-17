@@ -1,0 +1,3 @@
+set smarthome
+set softwrap
+bind ^R replace main

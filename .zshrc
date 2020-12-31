@@ -72,7 +72,9 @@ HIST_STAMPS="dd.mm.yyyy"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 #plugins=(git)
-plugins=(git httpie zsh-completions)
+plugins=(git sudo httpie zsh-completions safe-paste)
+# to install httpie:
+# => sudo apt-get install httpie
 # to install zsh-completions:
 # => git clone https://github.com/zsh-users/zsh-completions ~/.local/share/oh-my-zsh/custom/plugins/zsh-completions
 

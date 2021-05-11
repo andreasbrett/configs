@@ -123,3 +123,4 @@ alias zshrc="${=EDITOR} ~/.zshrc"
 alias upd="sudo apt-get update"
 alias upg="sudo apt-get upgrade"
 alias cdr='cd $(git rev-parse --show-toplevel)'
+alias ss='sudo su'

@@ -132,3 +132,10 @@ alias nmap_ssh_ciphers="nmap --script ssh2-enum-ciphers -p 22"
 alias nmap_ssh_auth="nmap --script ssh-auth-methods --script-args="ssh.user=root" -p 22"
 # > fetch security headers for website
 alias nmap_web_headers="nmap --script http-security-headers -p 443"
+
+# -------------------------------------------
+# run tmux on initial connection via SSH
+# -------------------------------------------
+if [[ -z $TMUX ]] && [[ -n $SSH_TTY ]]; then
+        exec tmux new-session -A -s "tmux"
+fi

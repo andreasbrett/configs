@@ -134,6 +134,19 @@ alias nmap_ssh_auth="nmap --script ssh-auth-methods --script-args="ssh.user=root
 alias nmap_web_headers="nmap --script http-security-headers -p 443"
 
 # -------------------------------------------
+# some docker-fu
+# -------------------------------------------
+alias docon="docker container ls --format 'table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.CreatedAt}}\t{{.State}}\t{{.Status}}\t{{.Size}}'"
+alias doup="docker-compose up --detach"
+alias dopull="docker-compose pull --no-parallel"
+alias doprune="docker image prune --all --force"
+alias dologs="docker logs -f"
+alias dostart="docker container start"
+alias dorestart="docker container restart"
+alias dostop="docker container stop"
+alias doexec="docker exec -it"
+
+# -------------------------------------------
 # run tmux on initial connection via SSH
 # -------------------------------------------
 if [[ -z $TMUX ]] && [[ -n $SSH_TTY ]]; then

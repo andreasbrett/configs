@@ -1,10 +1,13 @@
 set smarthome
 set softwrap
+set autoindent
+set positionlog
+set mouse
+set suspend
+set titlecolor white,cyan
 bind ^R replace main
 bind ^L linenumbers main
 bind ^T whitespacedisplay main
-bind M-C copytext main
-bind M-V uncut main
 unbind ^G main
 unbind ^J main
 unbind ^_ main

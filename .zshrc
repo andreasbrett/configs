@@ -72,7 +72,7 @@ HIST_STAMPS="dd.mm.yyyy"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 #plugins=(git)
-plugins=(git sudo httpie zsh-completions safe-paste)
+plugins=(git sudo httpie zsh-completions safe-paste aliases dirhistory last-working-dir zsh-navigation-tools)
 # to install httpie:
 # => sudo apt-get install httpie
 # to install zsh-completions:
@@ -116,6 +116,11 @@ alias upd="sudo apt-get update"
 alias upg="sudo apt-get upgrade"
 alias cdr='cd $(git rev-parse --show-toplevel)'
 alias ss='sudo su'
+alias fd="find . -type d -name"
+alias ff="find . -type f -name"
+alias rm="rm -i"
+alias tail="tail -f"
+
 
 # -------------------------------------------
 # some nmap-fu

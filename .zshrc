@@ -120,6 +120,7 @@ alias fd="find . -type d -name"
 alias ff="find . -type f -name"
 alias rm="rm -i"
 alias tail="tail -f"
+alias dmesg="dmesg -T"
 
 
 # -------------------------------------------

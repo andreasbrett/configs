@@ -1,13 +1,56 @@
-set smarthome
-set softwrap
+# ----------------------------------------
+# Features
+# ----------------------------------------
+
+# new lines have same indentation as previous
 set autoindent
-set positionlog
+
+# enable scrollbar
+set indicator
+
+# enable mouse support to place cursor
+#  - to select text use Shift
+#  - text selected that way (not via keyboard) can also be copied via Ctrl+C
 set mouse
+
+# save cursor position per file (max 200 recent files)
+set positionlog
+
+# make home key smarter (jump to real start of the line)
+set smarthome
+
+# soft-wrap lines (and only wrap on tabs/spaces not in the middle of a word)
+set softwrap
+set atblanks
+
+# convert tabs to spaces
+set tabsize 4
+set tabstospaces
+
+# ?!
 set suspend
+
+
+# ----------------------------------------
+# Styling
+# ----------------------------------------
+
+# set color for key bindings in help bar (very bottom)
+set keycolor white,cyan
+
+# set nano's title color (very top)
 set titlecolor white,cyan
-bind ^R replace main
-bind ^L linenumbers main
-bind ^T whitespacedisplay main
+
+
+
+# ----------------------------------------
+# Key Bindings
+#  - Ctrl = ^ (e.g. ^C)
+#  - Alt = M- (e.g. M-R)
+#  - F-keys = F (e.g. F4)
+# ----------------------------------------
+
+# unbind a whole bunch of default keymaps (that interfere with other bindings)
 unbind ^G main
 unbind ^J main
 unbind ^_ main
@@ -25,3 +68,36 @@ unbind ^A main
 unbind ^E main
 unbind F1 main
 unbind ^P main
+unbind M-Q main
+unbind ^F main
+unbind M-A main
+unbind M-^ main
+
+# Ctrl+R => search & replace
+# Ctrl+P => previous result
+# Ctrl+N => next result
+bind ^R replace main
+bind ^P findprevious main
+bind ^N findnext main
+
+# Ctrl+G insert file at current position (no filename completion...)
+bind ^G insert main
+
+# Ctrl+L => show line numbers
+bind ^L linenumbers main
+
+# Ctrl+T => show white space symbols
+bind ^T whitespacedisplay main
+
+# set and navigate through anchors
+bind "Markierung{M-S}" anchor main
+bind M-A prevanchor main
+bind M-D nextanchor main
+
+
+# ----------------------------------------
+# Miscellaneous
+# ----------------------------------------
+
+# include system-wide syntax-highlighting definitions
+include /usr/share/nano/*.nanorc

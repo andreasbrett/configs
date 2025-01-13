@@ -121,7 +121,7 @@ alias ff="find . -type f -name"
 alias rm="rm -i"
 alias tail="tail -f"
 alias dmesg="dmesg -T"
-
+alias ipa="ip -4 -brief -color address"
 
 # -------------------------------------------
 # some nmap-fu
